@@ -25,8 +25,8 @@ async function handlePageLoad() {
 
     // calculate start and end of range from page and pageSize
 
-    const { data, count } = await getDogs(breed, age, { start, end });
-    dogs = data;
+    // const { data, count } = await getDogs(breed, age, { start, end });
+    // dogs = data;
 
     // set totalPages from calculating based on count and page Size
 
@@ -36,6 +36,9 @@ async function handlePageLoad() {
 function handleFilter(filter) {
     const params = new URLSearchParams(window.location.search);
     // *** set breed, age, and page params based on filter
+    params.set('breed', filter.breed);
+    params.set('age', filter.breed);
+    params.set('page', 0);
     window.location.search = params.toString();
 }
 
