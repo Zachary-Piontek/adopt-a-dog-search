@@ -1,8 +1,8 @@
 
 
 export default function createFilter(form, { handleFilter }) {
-    // const input = form.querySelector('input');
-    // const select = form.querySelector('select');
+    const input = form.querySelector('input');
+    const select = form.querySelector('select');
 
     form.addEventListener('submit', (e) => {
         e.preventDefault();
@@ -13,10 +13,12 @@ export default function createFilter(form, { handleFilter }) {
             breed: formData.get('breed'),
             age: formData.get('age'),
         });
-        // console.log('age');
+        // console.log();
     });
 
-    // return ({ breed, age }) => {
+    return ({ breed, age }) => {
         // *** set the values of the select and input
-
+        input.value = age;
+        select.value = breed;
+    };
 }
