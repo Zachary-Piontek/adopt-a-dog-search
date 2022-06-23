@@ -45,6 +45,9 @@ function handleFilter(filter) {
 function handlePaging(change, pageSize) {
     const params = new URLSearchParams(window.location.search);
     // *** set page and pageSize params based on change and PageSize
+    page = Math.max(0, page + change);
+    params.set('page', page);
+    params.set('pageSize', pageSize);
     // make sure page not less than 1
     window.location.search = params.toString();
 }
