@@ -19,16 +19,31 @@ async function handlePageLoad() {
     const params = new URLSearchParams(window.location.search);
     // *** set state from params
     // breed
+    breed = params.get('breed') || '';
+    console.log(breed);
     // age (make sure a number, default to 0)
+    let agePar = params.get('age');
+    age = agePar ? Number(agePar) : 0;
+    console.log(age);
     // page (make sure a number, default to 1)
+    let pagePar = params.get('page');
+    page = pagePar ? Number(pagePar) : 1;
+    console.log(page);
     // pageSize (make sure a number, default to 5)
+    let pageSizePar = params.get('pageSize');
+    pageSize = pageSizePar ? Number(pageSizePar) : 3;
+    console.log(pageSize);
 
     // calculate start and end of range from page and pageSize
+    const start = (page - 1) * pageSize;
+    const end = (page * pageSize) - 1;
+    console.log(end);
 
-    // const { data, count } = await getDogs(breed, age, { start, end });
-    // dogs = data;
+    const { data, count } = await getDogs(breed, age, { start, end });
+    dogs = data;
 
     // set totalPages from calculating based on count and page Size
+    totalPages = Math.ceil(count / pageSize);
 
     display();
 }
