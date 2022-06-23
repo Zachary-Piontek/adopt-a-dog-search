@@ -22,15 +22,15 @@ async function handlePageLoad() {
     breed = params.get('breed') || '';
     console.log(breed);
     // age (make sure a number, default to 0)
-    let agePar = params.get('age');
+    const agePar = params.get('age');
     age = agePar ? Number(agePar) : 0;
     console.log(age);
     // page (make sure a number, default to 1)
-    let pagePar = params.get('page');
+    const pagePar = params.get('page');
     page = pagePar ? Number(pagePar) : 1;
     console.log(page);
     // pageSize (make sure a number, default to 5)
-    let pageSizePar = params.get('pageSize');
+    const pageSizePar = params.get('pageSize');
     pageSize = pageSizePar ? Number(pageSizePar) : 3;
     console.log(pageSize);
 
@@ -53,14 +53,14 @@ function handleFilter(filter) {
     // *** set breed, age, and page params based on filter
     params.set('breed', filter.breed);
     params.set('age', filter.breed);
-    params.set('page', 0);
+    params.set('page', 1);
     window.location.search = params.toString();
 }
 
 function handlePaging(change, pageSize) {
     const params = new URLSearchParams(window.location.search);
     // *** set page and pageSize params based on change and PageSize
-    page = Math.max(0, page + change);
+    page = Math.max(1, page + change);
     params.set('page', page);
     params.set('pageSize', pageSize);
     // make sure page not less than 1
