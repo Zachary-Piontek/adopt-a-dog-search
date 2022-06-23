@@ -1,0 +1,22 @@
+
+#dog-detail {
+    margin: 0 auto;
+    width: 100%;
+    max-width: 500px;
+    padding: 30px;
+
+    display: grid;
+    grid-template-rows: 300px auto  auto;
+}
+
+#dog-detail img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+}
+
+
+.intro {
+    font-size: 1.5rem;
+    font-weight: 800;
+}

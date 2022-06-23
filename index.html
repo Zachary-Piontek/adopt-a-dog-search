@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="icon" type="image/x-icon" href="assets/alchemy-favicon.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;600&family=Titillium+Web:wght@200;400;600&display=swap">
+    <link rel="stylesheet" href="styles/reset.css" />
+    <link rel="stylesheet" href="styles/main.css" />
+    <link rel="stylesheet" href="styles/home.css" />
+    <script defer src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js"></script>
+    <title>Adopt a Dog</title>
+</head>
+
+<body>
+    <header>
+        <a href="./">
+            <img class="logo" src="assets/dog-print.png" alt="dog print logo">
+        </a>
+        <h1>Adopt a Dog!</h1>
+    </header>
+
+    <main>
+        <section id="search" class="box">
+            <h2>Find Your Adorable Dog</h2>
+            <form id="filter">
+                <label>
+                    Breeds
+                    <select name="breed">
+                        <option value="">All Breeds</option>
+                        <option value="beagle">Beagle</option>
+                        <option value="chihuahua">Chihuahua</option>
+                        <option value="collie">Collie</option>
+                        <option value="corgi">Corgi</option>
+                        <option value="dachshund">Dachshund</option>
+                    </select>
+                </label>
+
+                <label>
+                    Min Age
+                    <input name="age" type="number" step="1" min="0">
+                </label>
+
+                <label>
+                    &nbsp;
+                    <button>🔍 Search</button>
+                </label>
+            </form>
+        </section>
+
+        <section id="paging" class="box">
+            <label>
+                Per Page:
+                <select>
+                    <option value="5">5</option>
+                    <option value="10">10</option>
+                    <option value="15">15</option>
+                </select>
+            </label>
+            <span class="page-info"></span>
+            <button>&lt; Prev</button>
+            <button>Next &gt;</button>
+        </section>
+
+        <section>
+            <ul id="dog-list"></ul>
+        </section>
+    </main>
+
+    <footer>&copy;2022 Aspiring Software Developer</footer>
+    <script type="module" src="app.js"></script>
+</body>
+
+</html>

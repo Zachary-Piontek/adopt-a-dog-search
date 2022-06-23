@@ -1,0 +1,55 @@
+:root {
+    --background: rgb(224, 234, 247);
+    --header-background: rgb(255, 186, 59);
+    --footer-background: rgb(243, 242, 242);
+    --shadow: 0px 10px 20px -12px rgba(0,0,0,0.45);
+}
+
+body {
+    height: 100%;
+    padding-bottom: 100px;
+    font-family: 'Rubik', san-serif;
+    background-image: url('../assets/bg.png');
+    background-size: 600px;
+}
+
+header {
+    position: sticky;
+    top: 0;
+    display: flex;
+    align-items: center;
+    background-color: var(--header-background);
+    box-shadow: var(--shadow);
+}
+
+.logo {
+    height: 50px;
+    margin: 20px;
+}
+
+main {
+    height: 100%;
+    padding: 20px;
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 10px;
+    display: flex;
+    justify-content: flex-end;
+    background-color: var(--footer-background);
+}
+
+h2 {
+    margin: 5px;
+}
+
+.box {
+    background: white;
+    border: 1px solid black;
+    border-radius: 10px;
+    box-shadow: var(--shadow);
+}

@@ -1,0 +1,87 @@
+
+#search {
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+#search form {
+    padding: 10px 0;
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+}
+
+#search label {
+    display: grid;
+    grid-template-rows: auto 1fr;
+    align-items: start;
+    gap: 5px;
+}
+
+select, input, button {
+    font-size: 1.1em;
+    height: 30px;
+}
+
+
+select {
+    width: 150px;
+}
+
+input {
+    width: 100px;
+}
+
+#paging {
+    padding: 20px;
+    margin-bottom: 20px;
+    width: max-content;
+    margin-left: auto;
+}
+
+#paging select {
+    width: 50px;
+}
+
+.page-info {
+    margin: 0 20px;
+    width: 75px;
+}
+
+#dog-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    grid-auto-rows: 200px;
+    gap: 20px;
+}
+
+.dog-card {
+    font-size: 1.5rem;
+    padding: 10px;
+    border-radius: 20px;
+    border: solid 1px black;
+    background: white;
+    box-shadow: var(--shadow);
+    cursor: pointer;
+
+    display: grid;
+    grid-template-rows: 25% 75%;
+    justify-items: center;
+    align-items: center;
+}
+
+.dog-card:hover {
+    background: rgb(248, 222, 188);
+}
+
+.dog-card a {
+    display: contents;
+    color: initial;
+}
+
+.dog-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 20px;
+}
