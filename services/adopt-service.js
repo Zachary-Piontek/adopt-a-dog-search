@@ -13,7 +13,7 @@ export async function getDogs(breed, age, { start, end }) {
         query = query.match({ breed });
     }
     if (age) {
-        query = query.match('age', age);
+        query = query.gte('age', age);
     }
 
     // *** add paging by setting a range modifier
